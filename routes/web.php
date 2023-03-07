@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+// Nanti perlu passing parameter ke view nya (data orang yang dipilih)
+Route::get('/profile', function () {
+    return view('profile');
 });
