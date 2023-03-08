@@ -2,10 +2,10 @@ let dataDiri = [
   {
     nama: 'Rafi Muhammad',
     wanted: '$50.000',
-    summary: '',
-    hobby: '',
-    matkul: '',
-    gambar: ''
+    summary: 'Hello, my name is Rafi Muhammad. I am in my 20s and always eager to learn anything. Adaptive is one word that describes me the most. Currently, I am studying computer science and statistics at Bina Nusantara University. In addition, I am interested in designing UI/UX and back-end engineering.',
+    hobby: ['Ngoding', 'Main Futsal'],
+    matkul: ['Web Programming', 'Software Engineering'],
+    gambar: 'pics/rafi.jpg'
   },
   {
     nama: 'Umar Siddiq Gege Khoiruddin',
