@@ -1,3 +1,7 @@
+html {
+  font-size: 14px !important;
+}
+
 * {
   margin: 0;
 }
@@ -16,6 +20,25 @@ nav {
 main > div {
   background-color: #506fff;
   border-radius: 2rem;
+}
+
+ul {
+  list-style: circle !important;
+}
+
+.about-us {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.member-pic {
+  border-radius: 1rem;
+  width: 10rem;
+  /* max-width: 100%; */
+}
+
+.other-pics {
+  border-radius: 100%;
 }
 
 footer {
