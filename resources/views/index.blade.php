@@ -28,46 +28,67 @@
             </div>
         </div>
     </nav>
-    <main class="is-flex container is-fluid" style="color: white">
-        <div class="is-flex is-justify-content-space-around is-align-items-center container is-fluid">
-            {{-- About us --}}
-            <div>
-                <div class="mb-4">
-                    <h1 class="is-size-3">NANTI DIISI NAMA</h1>
-                    <h6 class="is-size-5">Wanted $120.000</h6>
+    <main class="is-flex container is-fluid" style="color: white;">
+        <div class="is-flex is-justify-content-space-between is-align-items-center container is-fluid">
+            <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-start mt-5" style="height: 100%;">
+                <img class="member-pic" src="{{ asset('pics/rafi.jpg') }}" alt="">
+                <h1 class="is-size-4"><b>Rafi Muhammad</b></h1>
+                <div class="about-us">
+                    <p>Hello, my name is Rafi Muhammad. I am in my 20s and always eager to learn anything that takes my attention. Currently, I am studying computer science and statistics at Bina Nusantara University. In addition, I am interested in Full Stack Web Development & Mobile Development</p>
+                    <p class="mt-5">Hobby:</p>
+                    <ul>
+                        <li class="ml-4">Dengerin Music</li>
+                        <li class="ml-4">Nonton Film</li>
+                    </ul>
+                    <p>Matakuliah favorit:</p>
+                    <ul>
+                        <li class="ml-4">Web Programming</li>
+                        <li class="ml-4">Software Engineering</li>
+                    </ul>
                 </div>
-                <div class="mb-4">
-                    <p>Summary tentang diri kita</p>
-                </div>
-                <div class="mb-4">
-                    <p>Hobby kita</p>
-                    <p class="ml-3">List hobby kita (ide = keknya bagus pake icon-icon gitu nanti)</p>
-                </div>
-                <div class="mb-4">
-                    <p>Mata kuliah favorit kita</p>
-                    <p class="ml-3">List mata kuliah favorit</p>
-                </div>
-                <div class="mb-4">
-                    <p>dll. Kalo cukup. Kalo ga cukup taro di page profile</p>
-                </div>
-                <a class="button is-warning is-rounded" href="#">Profile</a>
+                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
             </div>
-            {{-- Gambar kita --}}
-            <div>
-                Nanti diisi gambar user yang dipilih
+            <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-start mt-5" style="height: 100%;">
+                <img class="member-pic" src="{{ asset('pics/sekar.jpg') }}" alt="">
+                <h1 class="is-size-4"><b>Sekar Azalea</b></h1>
+                <div class="about-us">
+                    <p class="summary">Hello, my name is Sekar Azalea. I am in my 20s and always eager to learn anything. Adaptive is one word that describes me the most. Currently, I am studying computer science and statistics at Bina Nusantara University. In addition, I am interested in designing UI/UX and back-end engineering.</p>
+                    <p class="mt-5">Hobby:</p>
+                    <ul>
+                        <li class="ml-4">Yoga</li>
+                    </ul>
+                    <p>Matakuliah favorit:</p>
+                    <ul>
+                        <li class="ml-4">Human and Computer Interaction</li>
+                    </ul>
+                </div>
+                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
             </div>
-            <div>
-                Nanti diisi gambar user yang tidak dipilih
+            <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-start mt-5" style="height: 100%;">
+                <img class="member-pic" src="{{ asset('pics/umar.jpg') }}" alt="">
+                <h1 class="is-size-4"><b>Umar Siddiq</b></h1>
+                <div class="about-us">
+                    <p class="summary">Hello, my name is Umar Siddiq Gege Khoiruddin, now I m studying at Bina Nusantara University majoring in computer science and statistics since 2020</p>
+                    <p class="mt-5">Hobby:</p>
+                    <ul>
+                        <li class="ml-4">Membaca buku</li>
+                    </ul>
+                    <p>Matakuliah favorit:</p>
+                    <ul>
+                        <li class="ml-4">Computer Network</li>
+                    </ul>
+                </div>
+                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
             </div>
         </div>
     </main>
     <footer>
         <div class="has-text-centered">
             <p>
-                Bingung mau nulis apa, palingan ntar logo-logo socmed
+                Copyrights 2023
             </p>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
