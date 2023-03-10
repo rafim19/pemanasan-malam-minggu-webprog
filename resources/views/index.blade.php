@@ -46,8 +46,8 @@
                         <li class="ml-4">Software Engineering</li>
                     </ul>
                 </div>
-                <button type="button" onclick="window.location='{{ route('profile', ['Rafi Muhammad']) }}'">Button</button>
-                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
+                <button class="button is-warning is-rounded mt-5 mb-5" type="button" onclick="window.location='{{ route('profile', ['Rafi Muhammad']) }}'">Profile</button>
+                {{-- <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a> --}}
             </div>
             <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-start mt-5" style="height: 100%;">
                 <img class="member-pic" src="{{ asset('pics/sekar.jpg') }}" alt="">
@@ -63,7 +63,8 @@
                         <li class="ml-4">Human and Computer Interaction</li>
                     </ul>
                 </div>
-                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
+                <button class="button is-warning is-rounded mt-5 mb-5" type="button" onclick="window.location='{{ route('profile', ['Sekar Azalea']) }}'">Profile</button>
+                {{-- <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a> --}}
             </div>
             <div class="column is-flex is-flex-direction-column is-align-items-center is-justify-content-start mt-5" style="height: 100%;">
                 <img class="member-pic" src="{{ asset('pics/umar.jpg') }}" alt="">
@@ -79,7 +80,8 @@
                         <li class="ml-4">Computer Network</li>
                     </ul>
                 </div>
-                <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a>
+                <button class="button is-warning is-rounded mt-5 mb-5" type="button" onclick="window.location='{{ route('profile', ['Umar Siddiq Gege Khoiruddin']) }}'">Profile</button>
+                {{-- <a class="button is-warning is-rounded mt-5 mb-5" href="">Profile</a> --}}
             </div>
         </div>
     </main>
