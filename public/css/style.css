@@ -1,8 +1,5 @@
-html {
+html, body {
   font-size: 14px !important;
-}
-
-* {
   margin: 0;
 }
 
@@ -17,32 +14,30 @@ nav {
   border-bottom: 1px solid #606c38;
 }
 
-main > div {
-  background-color: #506fff;
-  border-radius: 2rem;
+.brand {
+  padding: 1rem;
+  transition: 0.2s;
 }
+
+.brand:hover {
+  background-color: #18181a;
+  color: #e8f6fd;
+}
+
+/* .navbar-item {
+  margin-left: auto;
+} */
 
 ul {
   list-style: circle !important;
 }
 
-.about-us {
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
-.member-pic {
-  border-radius: 1rem;
-  width: 10rem;
-  /* max-width: 100%; */
-}
-
-.other-pics {
-  border-radius: 100%;
+ul {
+  padding-left: 1rem !important;
 }
 
 footer {
-  margin-top: auto;
+  justify-self: flex-end;
   border-top: 1px solid #606c38;
   padding: 1.5rem;
 }

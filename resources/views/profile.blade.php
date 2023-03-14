@@ -1,93 +1,59 @@
-<?php
-    $dataDiri = [
-        [
-            "nama" => 'Rafi Muhammad',
-            "summary" => 'Hello, my name is Rafi Muhammad. I am in my 20s and always eager to learn anything. Adaptive is one word that describes me the most. Currently, I am studying computer science and statistics at Bina Nusantara University. In addition, I am interested in designing UI/UX and back-end engineering.',
-            "hobby" => ['Ngoding', 'Main Futsal'],
-            "matkul" => ['Web Programming', 'Software Engineering'],
-            "gambar" => 'pics/rafi.jpg',
-            "umur" => 21,
-        ],
-        [
-            "nama" => 'Umar Siddiq Gege Khoiruddin',
-            "summary" => 'Hello, my name is Umar Siddiq Gege Khoiruddin, now I m studying at Bina Nusantara University majoring in computer science and statistics since 2020 ',
-            "hobby" => ['Membaca buku'],
-            "matkul" => ['Computer network'],
-            "gambar" => 'pics/umar.jpg',
-            "umur" => 20
-        ],
-        [
-            "nama" => 'Sekar Azalea',
-            "summary" => 'Hello, my name is Sekar Azalea. I am in my 20s and always eager to learn anything. Adaptive is one word that describes me the most. Currently, I am studying computer science and statistics at Bina Nusantara University. In addition, I am interested in designing UI/UX and back-end engineering.',
-            "hobby" => ['Yoga'],
-            "matkul" => ['Human and Computer Interaction'],
-            "gambar" => 'pics/sekar.jpg',
-            "umur" => 20
-        ]
-    ];
+@extends('layouts.master')
 
-    $activeData = array();
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+@endsection
+@section('title', 'Profile')
 
-    foreach ($dataDiri as $value) {
-        if ($value['nama'] == $nama) {
-            array_push($activeData, $value);
-            $activeData[0]['hobby'] = implode(' & ', $activeData[0]['hobby']);
-            $activeData[0]['matkul'] = implode(' & ', $activeData[0]['matkul']);
-            break;
-        }
-    }
-
-    $activeData = (object)$activeData;
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url(asset('css/profile.css')) }}">
-    {{-- CDN Bulma --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Profile</title>
-</head>
-<body>
-    {{-- <h1>{{ $nama }}</h1> --}}
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-item" href="#">
-                {{-- <img class="navbar-logo" src="{{ asset('pics/logo_binus.png') }}" width="100%" height="100%" alt="Binus Logo"> --}}
-                <strong>WEB PROG</strong>
-            </div>
-        </div>
-
-        <div class="navbar-menu">
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <a class="button is-link is-rounded is-hovered is-size-7" href="{{ route('home') }}">
-                        Home
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div>
-            <img id="picture" src="" alt="">
+@section('main')
+    <div class="is-flex is-justify-content-center my-6 content-wrapper" style="width: 100%">
+        <div class="is-flex is-align-items-start mr-6 img-wrapper">
+            <figure class="image is-128x128">
+                <img id="picture" class="is-rounded" style="border-radius: 2rem" src="{{ asset($data->gambar) }}" alt="">
+            </figure>
         </div>
         <div>
-            <input id="name" class="input" type="text" value="{{ $nama }}" disabled>
-            <input id="summary" type="text" value="">
-            <input id="hobby" type="text" value="">
-            <input id="matkul" type="text">
+            <div class="mb-2">
+                <b><label for="">Nama</label></b>
+                <input id="name" class="input" type="text" value="{{ $data->nama }}" disabled>
+            </div>
+            <div class="mb-2">
+                <b><label for="">Summary</label></b>
+                <textarea class="textarea" cols="70" disabled>{{ $data->summary }}</textarea>
+            </div>
+            <div class="mb-2">
+                <b><label for="">Umur</label></b>
+                <input id="umur" class="input" type="text" value="{{ $data->umur }}" disabled>
+            </div>
+            <div class="mb-2">
+                <b><label for="">Hobby</label></b>
+                @if($data->hobby != null && count($data->hobby) > 0)
+                    <ul>
+                        @foreach($data->hobby as $value)
+                            <li>
+                                {{ $value }}
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    {{ 'Tidak ada hobby' }}
+                @endif
+            </div>
+            <div>
+                <b><label for="">Mata Kuliah Favorit</label></b>
+                @if($data->matkul != null && count($data->matkul) > 0)
+                    <ul>
+                        @foreach($data->matkul as $value)
+                            <li>
+                                {{ $value }}
+                            </li>
+                        @endforeach
+                    </ul>
+                @else
+                    {{ 'Tidak ada mata kuliah favorit' }}
+                @endif
+            </div>
         </div>
-    </main>
-    <footer>
-        <div class="has-text-centered">
-            <p>
-                Copyrights 2023
-            </p>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+@endsection

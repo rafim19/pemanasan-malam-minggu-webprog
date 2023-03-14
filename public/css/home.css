@@ -1,0 +1,19 @@
+main > div {
+  background-color: #506fff;
+  border-radius: 2rem;
+}
+
+.about-us {
+  height: 16rem;
+  margin-bottom: 2rem;
+}
+
+.member-pic {
+  border-radius: 1rem;
+  width: 10rem;
+}
+
+.other-pics {
+  border-radius: 100%;
+}
+
