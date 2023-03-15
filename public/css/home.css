@@ -1,0 +1,25 @@
+.all-content {
+  background-color: #506fff;
+  border-radius: 2rem;
+}
+
+.about-us {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.member-pic {
+  border-radius: 1rem;
+  width: 10rem;
+}
+
+.other-pics {
+  border-radius: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .all-content {
+    flex-direction: column;
+  }
+}
+
