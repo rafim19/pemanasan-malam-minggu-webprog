@@ -5,7 +5,7 @@
 
 2. Profile Page:
 ![Profile Desktop Page](public/pics/documentation/Profile_page.png)
-
+<!-- . -->
 ## Mobile Viewport:
 1. Home Page
 ![Home Mobile Page](public/pics/documentation/home_mobile.png)
