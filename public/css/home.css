@@ -1,10 +1,10 @@
-main > div {
+.all-content {
   background-color: #506fff;
   border-radius: 2rem;
 }
 
 .about-us {
-  height: 16rem;
+  flex: 1;
   margin-bottom: 2rem;
 }
 
@@ -15,5 +15,11 @@ main > div {
 
 .other-pics {
   border-radius: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .all-content {
+    flex-direction: column;
+  }
 }
 
